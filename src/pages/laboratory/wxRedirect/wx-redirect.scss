@@ -1,0 +1,10 @@
+/**
+ * @author wuaixiaoyao
+ * @date 2018/9/13
+ * @Description:
+*/
+@import "../../../styles/css/variables.scss";
+@import "../../../styles/css/mixins.scss";
+.wx-wrapper{
+  @include up-down-wrap(#060026,#060029);
+}

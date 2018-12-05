@@ -1,0 +1,267 @@
+/**
+ * @author wuaixiaoyao
+ * @date 2018/11/27
+ * @Description: 移动端官网
+*/
+@import "../../styles/css/variables";
+@import "../../styles/css/mixins";
+.home-wrapper{
+  width: 100%;
+  overflow-y: scroll;
+  .home-header{
+    width:100%;
+    height:41px;
+    padding-left: 38px;
+    padding-top: 8px;
+    background: #FFFFFF;
+    .logo-img{
+      width: 54px;
+    }
+
+  }
+  .main-introduce{
+      width: 100%;
+      padding-top:30px;
+      background:$caimi-blue-color;
+      color:#FFFFFF;
+     h2{
+       padding-left: 38px;
+       font-size: 36px;
+       line-height: 50px;
+     }
+     h3{
+       padding-left: 38px;
+       font-size: 24px;
+       line-height: 33px;
+     }
+    p.introduce{
+      margin-top: 24px;
+      padding-left: 38px;
+      @include sc(14px,#fff);
+      line-height: 20px;
+    }
+    .go-to-app-btn{
+      width: 206px;
+      height: 40px;
+      margin: 20px auto 0px;
+      background-image: linear-gradient(0deg, #FFA200 0%, #FFDC00 100%);
+      box-shadow: 0 3px 16px 0 rgba(0,0,0,0.24);
+      border-radius: 22.5px;
+      font-size: 16px;
+      line-height:40px;
+      color: #FFFFFF;
+      text-align: center;
+      letter-spacing: 1px;
+      text-shadow: 0 1px 0 rgba(166,82,17,0.85);
+    }
+    .main-introduce-img{
+       width: 307px;
+       height: 222px;
+      display: block;
+       margin: 22px auto 0;
+    }
+    .opacity{
+      width: 100%;
+       height: 10px;
+      background: rgba(255,255,255,0.10);
+    }
+
+  }
+  .pro-introduce{
+     width: 100%;
+     padding-top: 34px;
+     padding-bottom: 24px;
+     background: #FFFFFF;
+      h5{
+        margin-top: 4px;
+        margin-bottom: 22px;
+        font-size: 14px;
+        line-height: 20px;
+        color:$caimi-blue-color;
+        text-align: center;
+        font-weight: bolder;
+
+      }
+  }
+  .hr-div{
+    height:7px;
+    background: rgba(216,216,216,0.20);
+  }
+  .caimi-person-wrapper{
+      //
+    width: 100%;
+    padding:24px 0;
+    background:#FFFFFF;
+  }
+  .about-caimi-wrapper{
+      //
+      padding: 25px;
+      background: rgba(216,216,216,0.20);
+    .about-caimi-title{
+      margin-top:24px;
+      margin-bottom: 10px;
+      font-size: 20px;
+      line-height: 28px;
+      color: #006FFF;
+      letter-spacing: 0.56px;
+      text-align: left;
+      font-weight: bolder;
+    }
+    .about-caimi-title:nth-child(even){
+       margin-top: 49px;
+       margin-bottom: 11px;
+
+    }
+    .who-are-im-desc{
+      font-size: 14px;
+      color: #4A4A4A;
+      letter-spacing: 0.88px;
+      text-align: justify;
+      line-height: 26px;
+    }
+    .who-are-im-desc:nth-child(even){
+      margin-top: 20px;
+    }
+    .news{
+      margin-top: 0;
+      font-size: 14px;
+      color: #4A4A4A;
+      letter-spacing: 0;
+      text-align: justify;
+      line-height: 21px;
+    }
+    .cite{
+      font-size: 12px;
+      color: #000000;
+      letter-spacing: 0;
+      line-height: 21px;
+      opacity: 0.5;
+    }
+
+  }
+  .item-title{
+    font-size: 24px;
+    line-height: 33px;
+    color:$caimi-blue-color;
+    letter-spacing: 0.67px;
+    text-align: center;
+    font-weight: bold;
+  }
+  .advantage-wrapper{
+    padding: 24px 0 22px;
+    background: #ffffff;
+    .business-phone{
+      text-align: center;
+      margin-top: 4px;
+      font-size: 20px;
+      color: #000000;
+      letter-spacing: 0;
+      line-height: 21px;
+    }
+    .advantage-item-wrapper{
+      width:100%;
+      margin-top: 24px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      img{
+        display: block;
+        width: 150px;
+        height: 103px;
+      }
+      .advantage-content{
+          .advantage-title{
+            font-size: 14px;
+            line-height: 20px;
+            color:$caimi-blue-color;
+            letter-spacing: 0.36px;
+            text-align: left;
+          }
+         .advantage-desc{
+            margin-top: 4px;
+           font-size: 12px;
+           line-height: 17px;
+           color: #4A4A4A;
+           letter-spacing: 0.37px;
+           text-align: left;
+         }
+      }
+    }
+
+  }
+  .company-wrapper{
+    width: 100%;
+    padding:22px 24px 60px;
+    background: #FFD100;
+    .company{
+      margin-bottom: 10px;
+      font-size: 14px;
+      color: #000000;
+      letter-spacing: 0;
+      line-height: 21px;
+      font-weight: bold;
+    }
+    .copyright{
+      margin-bottom: 20px;
+      font-size: 14px;
+      color: #7F3800;
+      letter-spacing: 0;
+      line-height: 21px;
+      font-weight: bold;
+    }
+    .download-btn{
+      width: 205px;
+      height: 46px;
+      margin: 0 auto 30px;
+      background: #000000;
+      font-size: 16px;
+      color: #FFFFFF;
+      letter-spacing: 1px;
+      line-height:45px;
+      border-radius: 22.5px;
+      text-align: center;
+    }
+    .channel-wrapper{
+      @include fj(center);
+      align-items: center;
+      .icon-wrapper{
+        position: relative;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        background: #CECECE;
+        cursor: pointer;
+        img{
+          width: 100%;
+        }
+        .qr-code-wrapper{
+          position: absolute;
+          @include center();
+          top:-59px;
+          width:98px;
+          height: 98px;
+          padding: 4px;
+          border-radius: 4px;
+          background: #FFFFFF;
+          img{
+            width: 90px;
+            height: 90px;
+          }
+          .angle{
+            position: absolute;
+            @include center();
+            top: 103px;
+            width:0;
+            height:0;
+            border-width:10px;
+            border-style: solid;
+            border-color:#FFFFFF transparent transparent;
+            border-radius:2px;
+            //background: red;
+          }
+        }
+      }
+
+    }
+  }
+}

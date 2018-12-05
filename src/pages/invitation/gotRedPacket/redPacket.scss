@@ -1,0 +1,69 @@
+/**
+ * @author wuaixiaoyao
+ * @date 2018/5/17
+ * @Description:
+*/
+@import "../../../styles/css/variables.scss";
+@import "../../../styles/css/mixins.scss";
+.redPackWrap{
+   @include  up-down-wrap(#FC7802, #CB0602);
+  padding: 20px 15px;
+  box-sizing: border-box;
+  .redArrive{
+     line-height: 33px;
+     text-align: center;
+     @include sc(24px,#fff);
+    .money{
+      color:#FFD100
+    }
+  }
+  .account{
+    line-height: 20px;
+    text-align: center;
+    @include sc(14px,#fff);
+  }
+  .redPacketWrapper{
+    @include fj();
+    flex-direction: column;
+    .redPacketContent{
+      width:100%;
+      height:52px;
+      background-image:url('../../../styles/imgs/invite/red_bag.png');
+      background-repeat:no-repeat;
+      background-size:100% 100%;
+      -moz-background-size:100% 100%;
+      @include fj();
+      align-items: center;
+      .redCash{
+        width:27%;
+        height:28px;
+        text-align: center;
+        @include sc(28px,$red-packet_color);
+        .symbol{
+          font-size: 14px;
+        }
+
+      }
+      .redType{
+        width:73%;
+        padding-left:20px;
+        padding-right: 15px;
+        @include fj(space-between);
+        align-items: center;
+        .redName{
+          height: 20px;
+          line-height: 20px;
+          @include sc(16px,#757475)
+        }
+        .redBtn{
+          width:55px;
+          height:24px;
+          border-radius: 2px;
+          background-color:$btn-color;
+          @include sc(14px ,#fff)
+        }
+      }
+    }
+
+  }
+}

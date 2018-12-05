@@ -1,0 +1,66 @@
+@import "../../../styles/css/variables.scss";
+@import "../../../styles/css/mixins.scss";
+.baby-wrap{
+  position: relative;
+  width:100%;
+  height: 100%;
+  background-color: #26176f;
+  overflow-y: scroll;
+  .bg-img{
+    width:100%;
+    height: 100%;
+    pointer-events: none;
+  }
+  .download-wrapper{
+    position: absolute;
+    z-index: 10;
+    width:100%;
+    height: 50px;
+    padding: 0 40px;
+    box-sizing: border-box;
+    .download-btn{
+      width:100%;
+      height: 50px;
+      margin: 0 auto;
+      line-height: 50px;
+      @include sc(20px,#fff);
+      background-image: linear-gradient(0deg, #FF687A 0%, #FFAD7A 100%);
+      border-radius: 100px;
+      text-align: center;
+    }
+  }
+  .phone-wrapper{
+    position: absolute;
+    z-index: 10;
+    width: 100%;
+    //bottom: 0;
+    padding:0 10px;
+    box-sizing: border-box;
+    .phone{
+      position: relative;
+      width:100%;
+      height:320px;
+      background: url("../../../styles/imgs/baby/phone.png") no-repeat;
+      background-size:100% 100%;
+      .receive-reward-wrapper{
+        position: absolute;
+        width:100%;
+        box-sizing: border-box;
+        padding: 0 15px;
+        .reward{
+          width:250px;
+          height:174px;
+          margin: 0 auto;
+          background-image: url("../../../styles/imgs/baby/reward.jpg");
+          background-size: contain;
+          background-repeat: no-repeat;
+
+        }
+
+      }
+    }
+
+  }
+
+
+}

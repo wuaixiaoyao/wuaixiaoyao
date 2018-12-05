@@ -1,0 +1,49 @@
+/**
+ * @author wuaixiaoyao
+ * @date 2018/6/8
+ * @Description:
+*/
+
+@import "../../../styles/css/variables.scss";
+@import "../../../styles/css/mixins.scss";
+.world-cup-wrap {
+  position: relative;
+  overflow-y: scroll;
+  box-sizing: border-box;
+  @include up-down-wrap(#99cc34,#779810);
+  .world-cup-img {
+    width: 100%;
+    height: auto;
+  }
+  .world-cup-btn-wrap{
+    position:absolute;
+    z-index:999;
+    position: absolute;
+    left: 6.933163329488076%;
+    top: 16.415543%;
+    width: 85.59996687306501%;
+    height: 4.280473%;
+  }
+  .bottom-download-wrap{
+    position: fixed;
+    z-index: 2000;
+    bottom: 10px;
+    width:100%;
+    padding-left: 15px;
+    padding-right: 15px;
+    box-sizing: border-box;
+    .bottom-download-btn{
+      width:100%;
+      height: 52px;
+      background-image: linear-gradient(-180deg, #FFE500 0%, #FFC700 98%);
+      border-radius: 4px;
+      font-size: 18px;
+      line-height: 52px;
+      text-align: center;
+      color: #FFFFFF;
+      letter-spacing: 0;
+      text-shadow: 0 2px 4px #E79E00;
+    }
+  }
+
+}

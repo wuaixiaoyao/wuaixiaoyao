@@ -1,0 +1,21 @@
+/**
+ * @author wuaixiaoyao
+ * @date 2018/9/26
+ * @Description:评论 回复 详情页
+*/
+@import "../../../styles/css/variables";
+@import "../../../styles/css/mixins";
+.reply-wrapper{
+  width: 100%;
+  overflow-y: scroll;
+  position:relative;
+  box-sizing: border-box;
+  background-color: #ffffff;
+  .reply-content{
+    //
+    padding-top: 5px;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+  }
+
+}

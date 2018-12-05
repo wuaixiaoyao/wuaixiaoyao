@@ -1,0 +1,31 @@
+/**
+ * @author wuaixiaoyao
+ * @date 2018/8/17
+ * @Description:
+*/
+@import "../../../styles/css/variables.scss";
+@import "../../../styles/css/mixins.scss";
+.tag-wrapper{
+  height:25px;
+  .tag-content{
+    height:25px;
+    padding: 4px 7px;
+    margin-right: 10px;
+    background: #F6F6F6;
+    border-radius: 2px;
+    @include sc(12px,#9B9B9B);
+    line-height: 25px;
+    text-align: center;
+  }
+  .tag-course{
+    height:25px;
+    padding: 4px 7px;
+    margin-right: 10px;
+    background: rgba(255,255,255,0.20);
+    border-radius: 2px;
+    @include sc(12px,#fff);
+    line-height: 25px;
+    text-align: center;
+  }
+}
+

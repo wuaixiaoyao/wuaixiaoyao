@@ -1,0 +1,18 @@
+/**
+ * @author wuaixiaoyao
+ * @date 2018/5/23
+ * @Description:
+*/
+@import "../../styles/css/mixins.scss";
+.avatar-wrapper{
+   background-color: #CECECE;
+   box-sizing: border-box;
+   @include borderRadius(50%);
+   .avatar{
+      @include borderRadius(50%);
+      box-sizing: border-box;
+   }
+
+}
+
+

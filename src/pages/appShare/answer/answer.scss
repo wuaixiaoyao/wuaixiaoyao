@@ -1,0 +1,82 @@
+/**
+ * @author wuaixiaoyao
+ * @date 2018/8/17
+ * @Description:
+*/
+@import "../../../styles/css/variables";
+@import "../../../styles/css/mixins";
+.answer-wrapper{
+  width: 100%;
+  .answer-header{
+    padding:15px 12px 10px;
+    flex-direction: column;
+    @include fj(space-between);
+    box-sizing: border-box;
+    .content-title{
+      font-size: 18px;
+      color: #4A4A4A;
+      letter-spacing: 0;
+      line-height: 25px;
+    }
+  }
+  .author-wrapper{
+    width: 100%;
+    .author-header{
+      height: 62px;
+      padding-left: 12px;
+      padding-right: 12px;
+      box-sizing: border-box;
+      flex-direction: row;
+      @include fj(flex-start);
+      align-items: center;
+      .author-detail{
+        width: 200px;
+        padding-left: 10px;
+        flex: 1;
+        .nickname{
+          @include sc(14px,#4A4A4A);
+          line-height: 20px;
+        }
+        .intro{
+          @include sc(12px,#9B9B9B);
+          line-height:18px;
+        }
+
+      }
+
+
+    }
+    .attention-btn{
+      width:52px;
+      height: 24px;
+      line-height: 24px;
+      background: #FFD100;
+      border-radius: 2px;
+      text-align: center;
+      color:#fff;
+    }
+    .answer-content{
+      width: 100%;
+      padding: 10px 12px;
+      box-sizing: border-box;
+      @include sc(14px,#4A4A4A);
+      line-height: 24px;
+      text-wrap:normal;
+      text-align: justify;
+      .answer-img{
+        width: 100%;
+      }
+    }
+    .extra{
+      text-align: right;
+      line-height: 18px;
+      @include sc(12px,#9B9B9B);
+      white-space:pre-line;
+      word-break:break-all;
+    }
+  }
+
+
+
+
+}

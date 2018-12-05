@@ -1,0 +1,101 @@
+/**
+ * @author wuaixiaoyao
+ * @date 2018/8/17
+ * @Description:
+*/
+@import "../../../styles/css/variables.scss";
+@import "../../../styles/css/mixins.scss";
+.comment-wrapper{
+    width:100%;
+    min-height: 20px;
+    box-sizing: border-box;
+  .comment-content{
+    @include fj(center);
+    padding: 12px 0px 0 10px;
+
+    box-sizing: border-box;
+    .comment-view{
+       flex:1;
+       margin-left: 10px;
+        padding-bottom: 12px;
+      padding-right: 10px;
+       //border-bottom: 1px solid #F2F2F2;
+      @include border-bottom-to-1px();
+      .comment-name{
+        flex:1;
+        text-align: left;
+        @include sc(14px,#4A4A4A );
+        line-height: 20px;
+        margin-bottom: 6px;
+      }
+      .comment-detail{
+        //
+        width: 100%;
+        @include sc(14px,#4A4A4A );
+        line-height: 20px;
+        text-align: justify;
+
+      }
+      .answer-for-answer{
+        background-color:  #F8F8F8;
+        padding: 7px 10px;
+        margin-top: 7px;
+        .answer-detail{
+          @include sc(14px,#999);
+          line-height: 20px;
+          .answer-nickName{
+            @include sc(14px,#FFD100)
+          }
+        }
+      }
+      .more-answer{
+        @include sc(14px,#FFD100)
+
+      }
+      .comment-ope{
+         @include fj(space-between);
+        height: 17px;
+        margin-top: 4px;
+        .comment-time{
+          flex: 1;
+          @include sc(12px,#9B9B9B);
+          line-height: 17px;
+        }
+        .comment-ope-view{
+          //
+          display:flex;
+          @include sc(12px,#9B9B9B);
+          line-height: 17px;
+          .comment-btn{
+            display: block;
+            width: 16px;
+            height: 16px;
+            margin-right: 4px;
+            background-image: url("../../../styles/imgs/common/comment/comment@3x.png");
+            background-size: cover;
+          }
+          .liked-btn{
+            display: block;
+            width: 16px;
+            height: 16px;
+            margin-left:20px ;
+            margin-right: 4px;
+            background-image: url("../../../styles/imgs/common/comment/liked@3x.png");
+            background-size: cover;
+          }
+          .like-btn{
+            display: block;
+            width: 16px;
+            height: 16px;
+            margin-left:20px ;
+            margin-right: 4px;
+            background-image: url("../../../styles/imgs/common/comment/like@3x.png");
+            background-size: cover;
+          }
+        }
+
+
+      }
+    }
+  }
+}

@@ -1,0 +1,235 @@
+/**
+ * @author wuaixiaoyao
+ * @date 2018/5/13
+ * @Description: sass混合宏
+*/
+//H5 适配
+$base-font-size:37.5px;
+@function px2rem($px, $base-font-size:$base-font-size) {
+  @if (unitless($px)) {
+    @warn "Assuming #{$px} to be in pixels, attempting to convert it into pixels for you";
+    @return px2rem($px + 0px); // That may fail.
+  } @else if (unit($px) == rem) {
+    @return $px;
+  }
+  @return ($px / $base-font-size) * 1rem;
+}
+@mixin px2rem($property,$px-values,$baseline-px:$base-font-size,$support-for-ie:false){
+  //Conver the baseline into rems
+  $baseline-rem: $baseline-px / 1rem * 1;
+  //Print the first line in pixel values
+  @if $support-for-ie {
+    #{$property}: $px-values;
+  }
+  //if there is only one (numeric) value, return the property/value line for it.
+  @if type-of($px-values) == "number"{
+    #{$property}: $px-values / $baseline-rem;
+  }
+  @else {
+    //Create an empty list that we can dump values into
+    $rem-values:();
+    @each $value in $px-values{
+      // If the value is zero or not a number, return it
+      @if $value == 0 or type-of($value) != "number"{
+        $rem-values: append($rem-values, $value / $baseline-rem);
+      }
+    }
+    // Return the property and its list of converted values
+    #{$property}: $rem-values;
+  }
+}
+@mixin font-dpr($font-size){
+  font-size: $font-size;
+  [data-dpr="2"] & {
+    font-size: $font-size * 2;
+  }
+
+  [data-dpr="3"] & {
+    font-size: $font-size * 3;
+  }
+}
+@mixin clearfix() {
+  &:before,
+  &:after {
+    content: " ";
+    display: table;
+  }
+  &:after {
+    clear: both;
+  }
+}
+@mixin mar-top($px){
+  @include px2rem(margin-top,$px);
+}
+@mixin mar-bottom ($px){
+  @include px2rem(margin-bottom,$px);
+}
+@mixin mar-left($px){
+  @include px2rem(margin-left,$px);
+}
+@mixin mar-right ($px){
+  @include px2rem(margin-right,$px);
+}
+// （Responsive image）Keep images from scaling beyond the width of their parents.
+@mixin img-responsive($display1) {
+  display: $display1;
+  max-width: 100%; // Part 1: Set a maximum relative to the parent
+  height: auto; // Part 2: Scale the height according to the width, otherwise you get stretching
+}
+
+
+@mixin absolute-center() {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@mixin fixed-center() {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+// 背景图片地址和大小
+@mixin bis($url) { 
+    background-image: url($url);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+@mixin borderRadius($radius) {
+    -webkit-border-radius: $radius;
+    -moz-border-radius: $radius;
+    -ms-border-radius: $radius;
+    -o-border-radius: $radius;
+    border-radius: $radius;
+}
+//定位全屏
+@mixin allcover{
+    position:absolute;
+    top:0;
+    right:0;
+}
+
+//定位上下左右居中
+@mixin center {  
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -moz-transform: rotate(-50%, -50%); /* */
+    -o-transform: rotate(-50%, -50%); /* opera*/
+    -ms-transform: rotate(-50%, -50%); /* IE 9 */
+    -webkit-transform: rotate(-50%, -50%); /* Safari and Chrome */
+}
+
+//定位上下居中
+@mixin ct {  
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+//定位左右居中
+@mixin cl {  
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+//宽高
+@mixin wh($width, $height){
+    @include px2rem(width,$width);
+    @include px2rem(height,$height);
+}
+
+//字体大小、行高、字体
+@mixin font($size, $line-height, $family: 'Microsoft YaHei') {  
+    font: #{$size}/#{$line-height} $family;
+}
+
+//字体大小，颜色
+@mixin sc($size, $color){
+    //font-size: px2em($size);
+    @include font-dpr($size);
+    color: $color;
+}
+// 行高
+@mixin line-height($height){
+  @include px2rem(line-height,$height)
+}
+
+//flex 布局和 子元素 对其方式
+@mixin fj($type:flex-start){
+  display: flex;
+  display: -moz-flex;
+  display: -webkit-flex;
+  display: -ms-flex;
+  justify-content: $type;
+
+}
+@mixin text-center(){
+  text-align: center;
+}
+//自定义输入框
+@mixin cusInput($height){
+  @include px2rem(height,$height);
+  //padding:9px 30px;
+  border: none;
+}
+//上下渐变背景wrap
+ @mixin up-down-wrap($startColor,$endColor){
+   height:100%;
+   background: -webkit-linear-gradient($startColor,$endColor); /* Safari 5.1 - 6.0 */
+   background: -o-linear-gradient($startColor,$endColor); /* Opera 11.1 - 12.0 */
+   background: -moz-linear-gradient($startColor,$endColor); /* Firefox 3.6 - 15 */
+   background: linear-gradient($startColor,$endColor); /* 标准的语法 */
+   display: flex;
+   display: -moz-flex;
+   display: -webkit-flex;
+   display: -ms-flex;
+   flex-direction: column;
+ }
+
+//
+@mixin rule-reward-btn{
+  position:absolute;
+  right:0;
+  width:70px;
+  height:40px;
+  cursor: pointer;
+  background: #5E60FF;
+  box-shadow: 0 2px 4px 0 rgba(0,0,0,0.50);
+  border-bottom-left-radius: 20px;
+  border-top-left-radius: 20px;
+  @include  sc(12px ,#fff);
+  text-align: center;
+  line-height: 40px;
+}
+@mixin yellow-linear-btn{
+  background: -webkit-linear-gradient(left, #FFF06E , #FFD600,#FFB900); /* Safari 5.1 - 6.0 */
+  background: -o-linear-gradient(right, #FFF06E , #FFD600,#FFB900); /* Opera 11.1 - 12.0 */
+  background: -moz-linear-gradient(right, #FFF06E , #FFD600,#FFB900); /* Firefox 3.6 - 15 */
+  background: linear-gradient(to right,  #FFF06E , #FFD600,#FFB900); /* 标准的语法 */
+}
+@mixin border-1px {
+  border: 1px solid #D9D9D9;
+  @media screen and (-webkit-min-device-pixel-ratio: 2) {
+    border: 0.5px solid #D9D9D9
+  }
+  @media screen and (-webkit-min-device-pixel-ratio: 3) {
+    border: 0.333333px solid #D9D9D9
+  }
+}
+
+@mixin border-bottom-to-1px {
+  border-bottom: 1px solid #D9D9D9;
+  @media screen and (-webkit-min-device-pixel-ratio: 2) {
+    border-bottom: 0.5px solid #D9D9D9
+  }
+  @media screen and (-webkit-min-device-pixel-ratio: 3) {
+    border-bottom: 0.333333px solid #D9D9D9
+  }
+
+}

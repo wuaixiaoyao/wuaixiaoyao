@@ -1,0 +1,42 @@
+/**
+ * @author wuaixiaoyao
+ * @date 2018/6/7
+ * @Description:规则或者 协议介绍
+*/
+@import "../../../styles/css/variables";
+@import "../../../styles/css/mixins";
+.caimi-modal{
+  width: 100%;
+  height: 100%;
+  @include fj(center);
+  align-items: center;
+  .caimi-modal-content{
+    @include fj(space-between);
+    flex-direction: column;
+    @include px2rem(width,295px);
+    @include px2rem(border-radius,5px);
+    background-color:#fff;
+    .caimi-modal-header{
+      @include px2rem(height,46px);
+      box-sizing: border-box;
+      border-bottom: 1px solid #D6D6D6;
+      text-align: center;
+      @include px2rem(line-height,46px);
+      @include sc(20px,#FFD100);
+    }
+    .caimi-modal-body{
+      flex: 1;
+      padding: 15px;
+
+    }
+    .caimi-modal-footer{
+      @include px2rem(height,46px);
+      box-sizing: border-box;
+      border-top: 1px solid #D6D6D6;
+      text-align: center;
+      @include px2rem(line-height,46px);
+      @include sc(14px,#9B9B9B);
+    }
+  }
+
+}

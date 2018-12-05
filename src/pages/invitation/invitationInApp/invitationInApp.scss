@@ -1,0 +1,194 @@
+/**
+ * @author wuaixiaoyao
+ * @date 2018/5/15
+ * @Description:
+*/
+@import "../../../styles/css/variables.scss";
+@import "../../../styles/css/mixins.scss";
+.ruleText{
+  @include sc(12px,#9B9B9B);
+  line-height:24px !important;
+  text-align: left !important;
+}
+.shareWrap{
+  @include up-down-wrap(#FC7802, #CB0602);
+  position: relative;
+  overflow-y: scroll;
+  box-sizing: border-box;
+  .inviteBg{
+    width:100%;
+    height: auto;
+  }
+  .ruleBtn{
+    position:absolute;
+    top:50px;
+    right:14px;
+    width: 58px;
+    height: 20px;
+    border-radius: 15px;
+    background-color: #3388ff;
+    @include  sc(12px ,#8B572A);
+    text-align: center;
+    line-height: 20px;
+    background: -webkit-linear-gradient(left, #FFF06E , #FFD600,#FFB900); /* Safari 5.1 - 6.0 */
+    background: -o-linear-gradient(right, #FFF06E , #FFD600,#FFB900); /* Opera 11.1 - 12.0 */
+    background: -moz-linear-gradient(right, #FFF06E , #FFD600,#FFB900); /* Firefox 3.6 - 15 */
+    background: linear-gradient(to right,  #FFF06E , #FFD600,#FFB900); /* 标准的语法 */
+  }
+  .inviteWrap{
+    padding:20px 15px;
+    box-sizing: border-box;
+
+  }
+  .inviteContainer{
+    //max-height: 405px;
+    @include borderRadius(5px);
+    background: #fff;
+    padding: 0;
+    position: relative;
+    .inviteTitle{
+      height:45px;
+      width: 100%;
+      box-sizing: border-box;
+      padding-left: 15px;
+      border-top-left-radius:5px;
+      border-top-right-radius:5px;
+      -moz-border-radius-topleft: 5px;
+      -moz-border-radius-topright: 5px;
+      line-height: 45px;
+      background-color: #EEE;
+      text-align: left;
+      @include sc(16px,#4A4A4A)
+    }
+    .inviteHeader{
+      display:flex;
+      height:45px;
+      width: 100%;
+      box-sizing: border-box;
+      padding-left: 15px;
+      padding-right:15px;
+      background-color: #EEE;
+      border-top-left-radius:5px;
+      border-top-right-radius:5px;
+      -moz-border-radius-topleft: 5px;
+      -moz-border-radius-topright: 5px;
+      line-height: 45px;
+      .inviteDetailTitle {
+        width:100px;
+        text-align: left;
+        @include sc(16px,#4A4A4A)
+      }
+      .detailBtn{
+        text-align:right;
+        @include sc(12px,#9B9B9B)
+
+      }
+      .week-reward{
+        flex: 1;
+        text-align: left;
+        margin-left: 10px;
+        @include sc(14px,#757475);
+      }
+    }
+
+    .inviteProgress{
+      height: 80px;
+      box-sizing: border-box;
+      padding:8px 0;
+      @include fj();
+      flex-direction: row;
+      .inviteProItem{
+        flex:1;
+        @include fj(center);
+        .inviteType{
+          line-height: 17px;
+          @include sc(12px,#9B9B9B)
+        }
+        .inviteNum{
+          line-height: 33px;
+          @include sc(24px,#FF4A4A)
+        }
+
+      }
+      .dotLine{
+        width:2px;
+        height:64px;
+      }
+
+    }
+    .recordWrap{
+      position: relative;
+      border-top-left-radius:5px;
+      border-top-right-radius:5px;
+      -moz-border-radius-topleft: 5px;
+      -moz-border-radius-topright: 5px;
+      //height:360px;
+      //max-height: 360px;
+    }
+
+    .recordContent{
+      box-sizing: border-box;
+      //min-height:62px;
+      //max-height: 360px;
+      .recordItem{
+        height:62px;
+        @include fj(center);
+        justify-content:space-between;
+        padding: 0 15px;
+        box-sizing: border-box;
+        border-bottom: 1px solid #D6D6D6;
+        .personInfo{
+          @include fj(center);
+          align-items: center;
+          .inviteAvatar{
+            width: 32px;
+            height: 32px;
+            @include borderRadius(50%);
+          }
+          .phoneAndTime{
+            padding-left: 10px;
+            .userAccount{
+              line-height:20px;
+              @include sc(14px,#9B9B9B)
+            }
+            .detail{
+              line-height: 17px;
+              @include sc(12px,#9B9B9B)
+            }
+          }
+        }
+        .typeAndReword{
+          padding: 0 6px;
+          .type{
+            line-height:17px;
+            @include sc(12px,#9B9B9B)
+          }
+          .reword{
+            line-height:20px;
+            @include sc(14px,#9B9B9B)
+          }
+        }
+        .inviteStatus{
+          line-height: 20px;
+          @include sc(14px,#9B9B9B);
+
+        }
+      }
+      .lastItem{
+        border-bottom-left-radius:5px;
+        border-bottom-right-radius:5px;
+        -moz-border-radius-bottomleft: 5px;
+        -moz-border-radius-bottomright: 5px;
+        border: none;
+      }
+
+    }
+
+  }
+  .invitationDetailWrapper{
+    padding: 15px;
+    box-sizing: border-box;
+  }
+
+}
+

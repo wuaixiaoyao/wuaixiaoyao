@@ -1,0 +1,26 @@
+/**
+ * @author wuaixiaoyao
+ * @date 2018/7/11
+ * @Description:
+*/
+@import "../../styles/css/variables.scss";
+@import "../../styles/css/mixins.scss";
+.no-data-view{
+  width:100%;
+  background: #FFFFFF;
+  border-radius: 5px;
+  @include fj(center);
+  flex-direction: column;
+  align-items: center;
+  .no-data-img{
+
+  }
+  .no-data-text{
+    width:217px;
+    margin-top: 12px;
+    line-height: 20px;
+    @include sc(14px,#9B9B9B);
+    letter-spacing: 0;
+    text-align: center;
+  }
+}

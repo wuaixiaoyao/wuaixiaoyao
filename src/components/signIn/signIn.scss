@@ -1,0 +1,28 @@
+/**
+ * @author wuaixiaoyao
+ * @date 2018/7/11
+ * @Description: 注册组价
+*/
+@import "../../styles/css/variables.scss";
+@import "../../styles/css/mixins.scss";
+.signIn-wrapper{
+  width:100%;
+  .input-wrapper{
+    width:100%;
+    height: 40px;
+    display: flex;
+    @include fj(space-between);
+    @include mar-top(12px);
+    .shareInput{
+      width:175px;
+      box-sizing: border-box;
+      @include cusInput(40px);
+      @include sc(15px,#4A4A4A);
+      padding:9px 15px;
+      line-height: 22px;
+      border-radius: 2px;
+      background-color: #eeeeee;
+      caret-color:#4A4A4A;
+    }
+  }
+}

@@ -1,0 +1,16 @@
+/**
+ * @author wuaixiaoyao
+ * @date 2018/6/29
+ * @Description: 收藏
+*/
+.collect-wrapper{
+  position: fixed;
+  z-index: 2000;
+  bottom: 0;
+  right:0;
+  .collect-img{
+    width:55px;
+    height: 55px;
+    cursor: pointer;
+  }
+}

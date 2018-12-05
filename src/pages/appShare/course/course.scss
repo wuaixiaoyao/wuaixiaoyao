@@ -1,0 +1,70 @@
+/**
+ * @author wuaixiaoyao
+ * @date 2018/8/16
+ * @Description:
+*/
+@import "../../../styles/css/variables";
+@import "../../../styles/css/mixins";
+.course-wrapper{
+  width:100%;
+  .course-cover{
+    position: relative;
+    box-sizing: border-box;
+    min-height: 220px;
+    background:#CECECE;
+    .course-img{
+      width:100%;
+      height:auto;
+    }
+    .cover-detail{
+       position: absolute;
+        z-index: 10000;
+       bottom: 0;
+      left: 0;
+       height:77px;
+       width: 100%;
+      padding-left: 20px;
+      padding-bottom: 14px;
+      box-sizing: border-box;
+      .cover-name{
+         height:33px;
+         line-height:33px;
+         @include sc(24px,#fff);
+      }
+
+
+    }
+  }
+  .intro-header{
+     height: 40px;
+     padding-left: 12px;
+     padding-right: 12px;
+    flex-direction: row;
+    @include fj(space-between);
+    .title{
+       @include sc(16px,#4A4A4A);
+      line-height: 40px;
+    }
+    .sub-num{
+      @include sc(12px,#9B9B9B);
+      line-height: 40px;
+    }
+
+  }
+
+  .text-wrapper{
+    padding: 10px 12px;
+    min-height: 20px;
+    .text-content{
+      letter-spacing: 0;
+       @include sc(14px,#4A4A4A);
+       line-height:20px
+    }
+  }
+  .cut-off-view{
+    height: 10px;
+    width: 100%;
+    background-color: #F7F7FA;
+  }
+
+}

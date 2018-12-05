@@ -1,0 +1,54 @@
+/**
+ * @author wuaixiaoyao
+ * @date 2018/6/14
+ * @Description:
+*/
+@import "../../../styles/css/variables.scss";
+@import "../../../styles/css/mixins.scss";
+.wakeWrapper{
+  background-color: #ffffff;
+  height: 100%;
+  box-sizing: border-box;
+  padding-bottom: 20px;
+  overflow-y: scroll;
+  .wakeImg{
+    width:100%;
+    height: auto;
+    overflow: hidden;
+  }
+  .openInWebWrapper{
+    height: 100%;
+    box-sizing: border-box;
+    padding-top: 110px;
+    position: relative;
+    @include fj(center);
+    align-items:flex-start;
+    .openInWebImg{
+      width:211px;
+      height: auto;
+    }
+    .heightLightImg{
+       position: absolute;
+       top:8px;
+       right:8px;
+       width: 44px;
+    }
+  }
+
+  .downLoadWrapper{
+    padding-top: 20px;
+    @include fj(center);
+    .downLoadBtn{
+      width:210px;
+      height: 50px;
+      background: #006FFF;
+      box-shadow: 0 2px 8px 0 rgba(0,0,0,0.22);
+      border-radius: 5px;
+      text-align: center;
+      line-height:50px;
+      @include sc(24px ,#fff)
+    }
+
+  }
+
+}

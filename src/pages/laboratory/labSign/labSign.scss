@@ -1,0 +1,53 @@
+/**
+ * @author wuaixiaoyao
+ * @date 2018/9/4
+ * @Description:
+*/
+@import "../../../styles/css/variables.scss";
+@import "../../../styles/css/mixins.scss";
+.lab-sign-wrapper{
+  width: 100%;
+  position:fixed;
+  top: 0;
+  left: 0;
+  z-index:0;
+  zoom: 1;
+  @include up-down-wrap(#060026,#060029);
+  background-image: url("../../../styles/imgs/laboratory/Background2@3x.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  -webkit-background-size: cover;
+  -o-background-size: cover;
+  background-position: center 0;
+  .bg-img{
+     width: 100%;
+     height: 100%;
+  }
+  .lab-sign-content{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width:100%;
+    padding:50px 30px 0;
+    z-index:99;
+    .sign-title{
+      margin-bottom: 27px;
+      text-align: center;
+      color: #FFFFFF;
+      font-size: 36px;
+      line-height: 36px;
+    }
+    .receive-btn{
+      height: 40px;
+      margin-top: 10px;
+      background: #FFD100;
+      border: 1px solid #000000;
+      line-height: 40px;
+      border-radius: 2px;
+      text-align: center;
+      @include sc(16px,#000);
+
+    }
+
+  }
+}

@@ -1,0 +1,49 @@
+/**
+ * @author wuaixiaoyao
+ * @date 2018/8/16
+ * @Description:
+*/
+@import "../../styles/css/variables.scss";
+@import "../../styles/css/mixins.scss";
+.app-share-header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    width:100%;
+    height:64px;
+    box-sizing: border-box;
+    padding-left: 12px;
+    padding-right: 12px;
+    @include fj(space-between);
+    flex-direction: row;
+    align-items: center;
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px 0 rgba(0,111,255,0.10);
+    .share-logo-wrapper{
+        width:52px;
+        height: 52px;
+        .share-logo{
+            width:52px;
+            height: auto;
+        }
+
+    }
+    .slogan{
+        flex:1;
+        @include sc(16px,#4D4D4D);
+        padding-left: 6px;
+        line-height: 64px;
+        font-weight: bolder;
+    }
+    .open-app-btn{
+        width:85px;
+        height: 32px;
+        background: #FFD100;
+        border-radius: 100px;
+        cursor: pointer;
+        @include sc(14px,#fff);
+        line-height:32px;
+        text-align: center;
+    }
+}

@@ -1,0 +1,90 @@
+/**
+ * @author wangweijia
+ * @date 2018/8/28
+ * @Description: 问题
+*/
+
+@import "../../../styles/css/variables.scss";
+@import "../../../styles/css/mixins.scss";
+
+.question-wrapper{
+    width: 100%;
+    overflow-y: scroll;
+    @include up-down-wrap(#060026,#060026);
+    position:fixed;
+    top: 0;
+    left: 0;
+    z-index:0;
+    zoom: 1;
+    .bg-img{
+        width:100%;
+        height: 100%;
+    }
+    .dollars{
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 51px;
+        flex: 1;
+        width: 100%;
+        align-items: center;
+    }
+    .title {
+        display: flex;
+        color: #ffffff;
+        font-size: 36px;
+        letter-spacing: 0.01px;
+    }
+    .txt-answer {
+        position: relative;
+        width: 290px;
+        height: 99px;
+    }
+    .txt-answer-txt {
+        display: flex;
+        align-content: center;
+        justify-content: center;
+        flex-direction: column;
+        position: absolute;
+        max-width: 80%;
+        left: 10%;
+        right: 10%;
+        top: 31%;
+        bottom: 20%;
+        font-size: 18px;
+        color: #000000;
+    }
+    .img-answer {
+        width: 323px;
+        height: 199px;
+    }
+    .icon {
+        width: 28px;
+        height: 28px;
+        border-radius: 14px;
+        margin-right: 5px;
+    }
+    .share-title-wrapper{
+        width: 100%;
+        margin-bottom: 20px;
+        .share-title{
+            font-size: 36px;
+            color: #FFFFFF;
+            text-align: center;
+            letter-spacing: 0.01px;
+        }
+        .get-money-btn{
+            width: 254px;
+            height: 27px;
+            margin: 0 auto;
+            margin-top:5px ;
+            text-align: center;
+            background: #FFCE01;
+            border-radius: 50px;
+            letter-spacing: 0;
+            @include sc(14px,#000);
+            line-height: 27px;
+
+        }
+    }
+}

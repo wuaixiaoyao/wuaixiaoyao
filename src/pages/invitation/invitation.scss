@@ -1,0 +1,105 @@
+/**
+ * @author wuaixiaoyao
+ * @date 2018/5/15
+ * @Description:
+*/
+@import "../../styles/css/variables.scss";
+@import "../../styles/css/mixins.scss";
+.rule-content{
+  //
+  @include px2rem(height,110px);
+
+  .ruleText{
+    @include sc(12px,#9B9B9B);
+    @include line-height(24px);
+    text-align: left !important;
+  }
+}
+
+.shareWrap{
+  @include up-down-wrap(#FC7802, #CB0602);
+  position: relative;
+  overflow-y: scroll;
+  width: 100%;
+  flex-direction: column;
+  @include fj(center);
+  .imgWrap{
+    width:100%;
+    min-height: 150px;
+    .inviteBg{
+      width:100%;
+      height: auto;
+    }
+  }
+
+  .ruleBtn{
+    position:absolute;
+    @include px2rem(top,30px);
+    @include px2rem(right,10px);
+    @include px2rem(width,50px);
+    @include px2rem(height,20px);
+    @include px2rem(border-radius,15px);
+    @include px2rem(line-height,20px);
+    cursor: pointer;
+    background-color: #3388ff;
+    @include  sc(12px ,#8B572A);
+    text-align: center;
+    background: -webkit-linear-gradient(left, #FFF06E , #FFD600,#FFB900); /* Safari 5.1 - 6.0 */
+    background: -o-linear-gradient(right, #FFF06E , #FFD600,#FFB900); /* Opera 11.1 - 12.0 */
+    background: -moz-linear-gradient(right, #FFF06E , #FFD600,#FFB900); /* Firefox 3.6 - 15 */
+    background: linear-gradient(to right,  #FFF06E , #FFD600,#FFB900); /* 标准的语法 */
+  }
+  .inviteWrap{
+    display: flex;
+    padding:20px 15px;
+    .inviteContent{
+      min-height: 200px;
+      flex-direction: column;
+      box-sizing: border-box;
+      padding:20px 15px 15px;
+      box-sizing: border-box;
+      border-radius:5px;
+      background: #fff;
+      .userId{
+        margin:12px 0 4px;
+        @include sc(16px,#4A4A4A);
+        @include px2rem(line-height,22px);
+      }
+      .inviteDescription{
+        padding: 0 18px;
+        @include px2rem(padding,"0 18px");
+        @include sc(14px,#757475);
+        @include px2rem(line-height,20px)
+      }
+      .shareBtnWrap{
+        width:100%;
+        @include px2rem(height,40px);
+        display: flex;
+        @include fj(space-between);
+        @include mar-top(12px);
+        .shareInput{
+          flex: 1 1 auto;
+          padding:9px 15px;
+          box-sizing: border-box;
+          width:100%;
+          @include cusInput(40px);
+          @include sc(15px,#4A4A4A);
+          @include px2rem(line-height,22px);
+          @include px2rem(border-radius,2px);
+          background-color: #eeeeee;
+        }
+      }
+      .goToBtn{
+        width: 100%;
+        @include px2rem(height,40px);
+        @include px2rem(border-radius,2px);
+        background-color: $btn-color;
+        touch-action: none;
+        @include sc(16px,#8B572A);
+      }
+    }
+  }
+
+
+}
+

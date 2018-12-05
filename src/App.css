@@ -1,0 +1,27 @@
+body{
+    background-color:#dcdee3;
+}
+.App {
+    max-width: 1600px;
+    margin: 0 auto;
+}
+@font-face {
+  font-family: 'Buffete';
+   src:url('styles/fonts/buffete.ttf') format('truetype');
+   font-weight: normal;
+   font-style: normal;
+}
+@font-face {
+    font-family: 'labFont';
+    src:url('styles/fonts/labFont.ttf') format('truetype'),
+    url('styles/fonts/labFont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.lab-font{
+    font-family: labFont !important;
+}
+.font-bolder{
+    font-weight:bolder;
+}
