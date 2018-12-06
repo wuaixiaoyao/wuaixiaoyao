@@ -13,7 +13,7 @@
   .caimi-modal-content{
     @include fj(space-between);
     flex-direction: column;
-    @include px2rem(width,295px);
+    width:295px;
     @include px2rem(border-radius,5px);
     background-color:#fff;
     .caimi-modal-header{

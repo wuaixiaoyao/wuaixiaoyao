@@ -2,6 +2,7 @@ body{
     background-color:#dcdee3;
 }
 .App {
+    width: 375px;
     max-width: 1600px;
     margin: 0 auto;
 }

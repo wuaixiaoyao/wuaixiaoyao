@@ -5,6 +5,7 @@
 */
 import React from "react";
 import "./home.scss"
+import "./home-c.css"
 import {WEI_BO_LINK,TOU_TIAO_LINK} from "../../constant/index"
 import logoImg from "../../styles/imgs/home/logo.png"
 import wechatIcon from "../../styles/imgs/home/weChat.png"

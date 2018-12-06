@@ -3,6 +3,7 @@ import BaseComponent from "../../../components/BaseComponent"
 import {H5Util} from "../../../utils/index"
 import {getLabResult, checkReward, LabLogin, inviteUserInfo, inviteDetail} from "../../../api/api"
 import "./question.scss"
+import "./question-c.css"
 import { bindActionCreators } from 'redux'
 import * as caimiAction from '../../../redux/action/Index';
 import {connect} from "react-redux";

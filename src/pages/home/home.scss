@@ -8,17 +8,48 @@
 .home-wrapper{
   width: 100%;
   overflow-y: scroll;
+
+  .logo-img{
+    width: 54px;
+  }
   .home-header{
     width:100%;
     height:41px;
     padding-left: 38px;
     padding-top: 8px;
     background: #FFFFFF;
-    .logo-img{
-      width: 54px;
-    }
-
   }
+  .advantage-item-wrapper{
+    width:100%;
+    margin-top: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    img{
+      display: block;
+      width: 150px;
+      height: 103px;
+    }
+    .advantage-content{
+      .advantage-title{
+        font-size: 14px;
+        line-height: 20px;
+        color:#0e80d2;
+        letter-spacing: 0.36px;
+        text-align: left;
+      }
+      .advantage-desc{
+        margin-top: 4px;
+        font-size: 12px;
+        line-height: 17px;
+        color: #4A4A4A;
+        letter-spacing: 0.37px;
+        text-align: left;
+      }
+    }
+  }
+
+
   .main-introduce{
       width: 100%;
       padding-top:30px;
@@ -158,35 +189,7 @@
       letter-spacing: 0;
       line-height: 21px;
     }
-    .advantage-item-wrapper{
-      width:100%;
-      margin-top: 24px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      img{
-        display: block;
-        width: 150px;
-        height: 103px;
-      }
-      .advantage-content{
-          .advantage-title{
-            font-size: 14px;
-            line-height: 20px;
-            color:$caimi-blue-color;
-            letter-spacing: 0.36px;
-            text-align: left;
-          }
-         .advantage-desc{
-            margin-top: 4px;
-           font-size: 12px;
-           line-height: 17px;
-           color: #4A4A4A;
-           letter-spacing: 0.37px;
-           text-align: left;
-         }
-      }
-    }
+
 
   }
   .company-wrapper{
