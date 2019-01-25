@@ -3,3 +3,7 @@ body {
   padding: 0;
   font-family: sans-serif;
 }
+img{
+    /*vm兼容处理使用Viewport Units Buggyfill造成的副作用，需要如下设置img*/
+  content: normal !important;
+}
