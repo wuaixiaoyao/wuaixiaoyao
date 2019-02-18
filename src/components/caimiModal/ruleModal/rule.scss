@@ -14,14 +14,14 @@
     @include fj(space-between);
     flex-direction: column;
     width:295px;
-    @include px2rem(border-radius,5px);
+    border-radius: 5px;
     background-color:#fff;
     .caimi-modal-header{
-      @include px2rem(height,46px);
+      height: 46px;
       box-sizing: border-box;
       border-bottom: 1px solid #D6D6D6;
       text-align: center;
-      @include px2rem(line-height,46px);
+      line-height: 46px;
       @include sc(20px,#FFD100);
     }
     .caimi-modal-body{
@@ -30,11 +30,11 @@
 
     }
     .caimi-modal-footer{
-      @include px2rem(height,46px);
+      height: 46px;
       box-sizing: border-box;
       border-top: 1px solid #D6D6D6;
       text-align: center;
-      @include px2rem(line-height,46px);
+      line-height: 46px;
       @include sc(14px,#9B9B9B);
     }
   }

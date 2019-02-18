@@ -26,3 +26,6 @@ body{
 .font-bolder{
     font-weight:bolder;
 }
+img{
+    content: normal !important;
+}

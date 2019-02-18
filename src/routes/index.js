@@ -6,17 +6,12 @@
 import React, { Component } from 'react';
 import { HashRouter as Router,Route, Redirect, Switch ,BrowserRouter} from 'react-router-dom';
 import asyncComponent from "../components/asyncComponent/asyncComponent"
-import CompetitionShare from '@/pages/competitionShare/competitionShare'
 import '../styles/css/common.scss'
 import ProtectedRoute from './protectedRoute'
 import {H5Util} from "../utils";
 
-const Invitation = asyncComponent(() => import("../pages/invitation/invitation"));
 const InvitationInApp = asyncComponent(() => import("@/pages/invitation/invitationInApp/invitationInApp"));
 const GotRedPacket =  asyncComponent(()=>import("@/pages/invitation/gotRedPacket/gotRedPacket"))
-const BannerView = asyncComponent(()=>import("@/pages/invitation/bannerInAppView/bannerView/bannerView"))
-const CommonBannerView = asyncComponent(()=>import("@/pages/invitation/bannerInAppView/bannerView/commonBannerView"))
-const NewUserPacket = asyncComponent(()=>import("@/pages/invitation/bannerInAppView/newUserPacket/newUserPacket"))
 //分享
 const Course = asyncComponent(()=>import("@/pages/appShare/course/course"))
 const ShareAnswer = asyncComponent(()=>import("@/pages/appShare/answer/answer"))
@@ -49,7 +44,6 @@ const Invite = asyncComponent(()=>import("@/pages/laboratory/invite/invite"))
 const Guide = asyncComponent(()=>import("@/pages/laboratory/guide/guide"))
 const WXRedirect = asyncComponent(()=>import("@/pages/laboratory/wxRedirect/wxRedirect"))
 //home 页
-const Home =  asyncComponent(()=>import("@/pages/home/index"))
 //404 页面
 const NotFound = asyncComponent(()=>import("@/pages/404.js"))
 const styles = {
@@ -60,10 +54,6 @@ const styles = {
 }
 const requireAuth = (nextState, replace) => {
     console.log("enter")
-    // if (!auth.isAdmin()) {
-    //     // Redirect to Home page if not an Admin
-    //     replace({ pathname: '/' })
-    // }
 }
 export default class Routers extends Component {
 
@@ -83,8 +73,6 @@ export default class Routers extends Component {
     }
     onRouterChange(prevState,nextState,replace){
         //
-
-
     }
     initWeChat(){
         let devUrl = "https://caimi.we.com/activity/#/app/laboratory/index";
@@ -102,11 +90,7 @@ export default class Routers extends Component {
                     <Router >
                         <Switch>
                             <Route exact path="/app/invitation/invitationInApp" component = {InvitationInApp}/>}/>
-                            <Route exact path="/" render={() => <Redirect to="/app/invitation/index/:userId"/>}/>
-                            <Route exact path="/app/appBannerView/:bannerType" component={BannerView} />}/>
-                            {/*banner 模板页*/}
-                            <Route exact path="/app/appCommonBannerView" component={CommonBannerView} />}/>
-                            <Route exact path="/app/bannerView/newUserPacket" component={NewUserPacket} />}/>
+                            <Route exact path="/" render={() => <Redirect to="/app/invitation/invitationInApp"/>}/>
                             <Route exact path="/app/invitation/gotRedPacket" component = {GotRedPacket} />
                             <Route exact path="/app/appShare/course" component = {Course} />
                             <Route exact path="/app/appShare/answer" component = {ShareAnswer} />
@@ -118,7 +102,6 @@ export default class Routers extends Component {
                             /*
                               app 内嵌页面
                              */
-                            <Route exact path="/app/invitation/index/:userId" component={Invitation} />
                             <Route exact path ="/app/news" component = {NewsInfo}></Route>
                             <Route exact path ="/app/notice" component = {NoticeInfo}></Route>
                             <Route exact path ="/app/article" component = {ArticleInfo}></Route>
@@ -133,14 +116,7 @@ export default class Routers extends Component {
                             <Route exact path ="/app/laboratory/invite" component = {Invite}></Route>
                             <Route exact path ="/app/laboratory/guide" component = {Guide}></Route>
                             <Route exact path ="/app/laboratory/wx-redirect" component = {WXRedirect}></Route>
-                            /*
-                              home
-                             */
-                            <Route exact path ="/app/home" component = {Home}></Route>
                             <Route exact path="/404" component={NotFound} />
-                            <ProtectedRoute extract = {true} path = '/app/competition/competitionShare'>
-                                <CompetitionShare/>
-                            </ProtectedRoute>
                             <Route render={() => <Redirect to="/404"/> } />
                         </Switch>
                     </Router>

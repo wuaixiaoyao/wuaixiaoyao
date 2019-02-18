@@ -16,12 +16,12 @@ export const Host = {
     ant:"https://caimi.we.com/ant/web/",//埋点
     develop
 }
-const pro = "https://caimi.we.com/activity/";
+const sharePro = "https://caimi.we.com/activity/";
 const sharePre = "http://10.250.80.43:8889/";
 const dailyShare = "https://caimi.we.com/dailyactivity/";
 export const ShareHost = {
     dev:"http://10.250.80.43:3000/",
     pre:"http://10.250.80.43:8889/",
-    pro,
+    pro:sharePro,
     daily:dailyShare,
 }
